@@ -3,9 +3,9 @@ services:
  - docker
 
 before_install:
- - docker build -t GreenDevOps/docker_and_kubernetes_course -f Dockerfile.dev .
+ - docker build -t greendevops/docker_and_kubernetes_course -f Dockerfile.dev .
 
 script:
- - docker run GreenDevOps/docker_and_kubernetes_course npm run test -- --coverage
+ - docker run greendevops/docker_and_kubernetes_course npm run test -- --coverage
 
 language: node_js
