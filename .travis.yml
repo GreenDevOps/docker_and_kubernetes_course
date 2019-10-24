@@ -1,2 +1,11 @@
-language: node_js
+sudo: required
+services:
+ - docker
 
+before_install:
+ - docker build -t GreenDevOps/docker_and_kubernetes_course -f Dockerfile.dev .
+
+script:
+ - docker run GreenDevOps/docker_and_kubernetes_course npm run test -- --coverage
+
+language: node_js
