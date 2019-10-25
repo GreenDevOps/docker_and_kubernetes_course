@@ -6,6 +6,6 @@ before_install:
  - docker build -t greendevops/docker_and_kubernetes_course -f Dockerfile.dev .
 
 script:
- - docker run greendevops/docker_and_kubernetes_course npm run test -- --coverage
+ - docker run -e CI=true greendevops/docker_and_kubernetes_course npm run test
 
 language: node_js
